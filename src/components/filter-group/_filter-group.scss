@@ -62,10 +62,6 @@
           border-color: $colour-nice-grey-1;
         }
       }
-
-      &:focus {
-        @include default-focus-style;
-      }
     }
   }
 
@@ -103,13 +99,9 @@
     input {
       float: left;
       height: rem($spacing-medium);
-      margin-left: - rem($spacing-medium + $spacing-small);
+      margin-left: -rem($spacing-medium + $spacing-small);
       margin-top: rem($spacing-xx-small);
       width: rem($spacing-medium);
-
-      &:focus {
-        @include default-focus-style;
-      }
     }
   }
 }

@@ -31,7 +31,21 @@ $radio-base-size: rem($nds-spacing-large);
 
     &:focus {
       & + label:before {
-        @include nds-default-focus-style(true);
+        background: inherit !important;
+        box-shadow: none;
+        color: inherit !important;
+      }
+    }
+    &:focus-visible {
+      & + label:before {
+        @include nds-focus-style;
+        box-shadow: none;
+        outline: 3px solid $nds-colour-nice-black;
+      }
+    }
+    &:focus:not(:focus-visible) {
+      & + label:before {
+        @include nds-focus-style-pointer;
       }
     }
   }

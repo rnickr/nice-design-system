@@ -36,13 +36,8 @@
 
   &:visited,
   &:hover,
-  &:active,
-  &:focus {
+  &:active {
     color: $nds-colour-text;
-  }
-
-  &:focus {
-    @include nds-default-focus-style;
   }
 }
 

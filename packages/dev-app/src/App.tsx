@@ -23,7 +23,12 @@ import { HorizontalNavView } from "./views/HorizontalNavView";
 import { TableView } from "./views/TableView";
 import { FullBleedView } from "./views/FullBleedView";
 import { CalloutView } from "./views/CalloutView";
+import { Radio } from "@nice-digital/nds-radio";
+import { Checkbox } from "@nice-digital/nds-checkbox";
+import { Button } from "@nice-digital/nds-button";
 import "./App.scss";
+import { FormGroup } from "@nice-digital/nds-form-group";
+import { Textarea } from "@nice-digital/nds-textarea";
 
 const browserHistory = createBrowserHistory();
 
@@ -124,10 +129,24 @@ class App extends Component {
 						reprehenderit tempora! Amet consequuntur ducimus{" "}
 						<a href="#">illum</a> incidunt maxime molestiae possimus quae quasi
 						quisquam ratione reprehenderit, soluta, ullam unde voluptate
-						voluptatibus. Aliquam atque blanditiis dolorem eius eos esse facere
-						facilis fugit illo labore laboriosam laborum maiores necessitatibus
-						nostrum quasi, recusandae reprehenderit sit.
+						voluptatibus. Aliquam atque <a href="#">blanditiis dolorem eius</a>{" "}
+						eos esse facere facilis fugit illo labore laboriosam laborum maiores
+						necessitatibus nostrum quasi, recusandae reprehenderit sit.
 					</p>
+					<Textarea label="Hello" name="hello" />
+					<hr />
+					<p>
+						<Button>Here's a button</Button>
+					</p>
+
+					<hr />
+					<FormGroup name="thing">
+						<Radio value="yes" label="Yes, please." />
+						<Radio value="no" label="No, thanks." />
+					</FormGroup>
+					<FormGroup name="monkey">
+						<Checkbox label="Subscribe" value="subscribe" />
+					</FormGroup>
 				</main>
 			</Router>
 		);

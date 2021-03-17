@@ -17,6 +17,12 @@ export const FormGroupView = () => {
 					error={true}
 					errorMessage="This field is required"
 				/>
+				<Input
+					name="first_name"
+					type="text"
+					label="First name"
+					hint="Enter your given name"
+				/>
 			</FormGroup>
 			<FormGroup legend="Text area hey">
 				<Textarea
@@ -26,6 +32,13 @@ export const FormGroupView = () => {
 					error={true}
 					errorMessage="Argh!"
 					defaultValue="hello there"
+				/>
+			</FormGroup>
+			<FormGroup legend="Text area hey">
+				<Textarea
+					label="Your address"
+					name="textarea"
+					hint="Please enter your postal address"
 				/>
 			</FormGroup>
 			<FormGroup

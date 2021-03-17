@@ -32,10 +32,6 @@
     &:visited {
       color: $nds-colour-link;
     }
-
-    &:focus {
-      background: none;
-    }
   }
 
   @include mq($from: md) {

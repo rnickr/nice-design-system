@@ -43,13 +43,6 @@
     text-decoration: none;
   }
 
-  &:focus {
-    @include nds-default-focus-style;
-    background: $nds-colour-btn-primary;
-    border-color: $nds-colour-focus-inverse;
-    color: $nds-colour-btn-primary-text;
-  }
-
   &:active {
     background: $nds-colour-btn-primary-hover;
     text-decoration: none;
@@ -87,10 +80,6 @@
     color: $nds-colour-btn-cta-text;
   }
 
-  &:focus {
-    background: $nds-colour-btn-cta-hover;
-  }
-
   &:active {
     background: $nds-colour-btn-cta-hover;
   }
@@ -112,10 +101,6 @@
     color: $nds-colour-btn-secondary-text;
   }
 
-  &:focus {
-    background: $nds-colour-btn-secondary-hover;
-  }
-
   &:active {
     background: $nds-colour-btn-secondary-hover;
   }
@@ -135,10 +120,6 @@
   &:hover {
     background: $nds-colour-btn-inverse-hover;
     color: $nds-colour-btn-inverse-text;
-  }
-
-  &:focus {
-    background: $nds-colour-btn-inverse-hover;
   }
 
   &:active {

@@ -66,9 +66,11 @@ $nds-checkbox-size: rem($nds-spacing-large);
     width: $nds-checkbox-size;
     z-index: 1;
 
-    &:focus + .checkbox__label:before {
-      @include nds-default-focus-style;
-    }
+    //&:focus + .checkbox__label:before {
+    ////  @include nds-focus-style;
+    ////  box-shadow: none !important;
+    ////  outline: 3px solid $nds-colour-nice-black;
+    ////}
 
     &:checked + .checkbox__label:after {
       opacity: 1;

@@ -6,35 +6,47 @@
 /// @param {Boolean} $rounded whether to use box shadow for border (outline can't be styled to have radius corners)
 /// @output the default focus styles ie background colour and outline
 /// @since 0.1.0
-@mixin nds-default-focus-style($rounded: false) {
-  @if $rounded {
-    box-shadow: 0 0 0 rem($nds-spacing-x-small) $nds-colour-focus;
-    outline: $nds-spacing-x-small solid transparent;
-    outline-offset: $nds-spacing-x-small;
-  } @else {
-    outline: rem($nds-spacing-x-small) solid $nds-colour-focus;
-  }
-  &:not(:focus-visible) {
-    outline: none;
-  }
-  &:focus-visible {
-    background-color: $nds-colour-nice-white;
-    color: $nds-colour-nice-black;
-    font-weight: bold;
-    @if $rounded {
-      box-shadow: 0 0 0 rem($nds-spacing-small) $nds-colour-focus;
-      outline-offset: $nds-spacing-small;
-      outline-width: $nds-spacing-small;
-    } @else {
-      outline: rem($nds-spacing-small) solid $nds-colour-focus;
-    }
-  }
+@mixin nds-default-focus-style {
+  // keeping the default in for backwards compatibility
+  @include nds-focus-style;
 }
 
-/// The inverse focus style used for elements like anchors and buttons
-/// on an inverse (dark) background
-/// @output the inverse focus styles ie background colour and outline
-/// @since 0.3.1
 @mixin nds-inverse-focus-style {
-  outline: rem($nds-spacing-x-small) solid $nds-colour-focus-inverse;
+  // keeping the inverse in for backwards compatibility
+  @include nds-focus-style;
+}
+
+@mixin nds-focus-style {
+  background: $nds-colour-focus-background;
+  box-shadow: 0 rem($nds-spacing-x-small) $nds-colour-nice-black;
+  color: $nds-colour-nice-black;
+  outline: none;
+  text-decoration: none;
+}
+
+@mixin nds-focus-style-subtle {
+  //box-shadow: 0 0 5px 0 black;
+  outline: 5px solid #e59700;
+}
+
+@mixin nds-focus-style-pointer {
+  //background: initial;
+  //box-shadow: none;
+  //color: inherit !important;
+  outline: none;
+}
+
+@mixin nds-focus {
+  // Where focus-visible is not supported
+  &:focus {
+    @include nds-focus-style-subtle;
+  }
+  //If focus-visible is supported
+  //&:focus-visible {
+  //  @include nds-focus-style;
+  //}
+  //////Any focus that is not focus-visible (like a mouse click)
+  //&:focus:not(:focus-visible) {
+  //  @include nds-focus-style-pointer;
+  //}
 }

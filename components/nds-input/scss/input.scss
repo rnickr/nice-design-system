@@ -30,10 +30,6 @@
     border: rem($nds-spacing-xx-small) solid $nds-colour-border;
     padding: rem($nds-spacing-small);
     width: 100%;
-
-    &:focus {
-      @include nds-default-focus-style;
-    }
   }
 
   &--error {

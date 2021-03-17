@@ -65,10 +65,14 @@ const noHeading = () => (
 
 const setOfLinksToNest = (
 	<>
-		<StackedNavLink hint="hint text">Nested link one</StackedNavLink>
+		<StackedNavLink destination="#" hint="hint text">
+			Nested link one
+		</StackedNavLink>
 		<StackedNavLink
 			nested={
-				<StackedNavLink hint="hint text">Deep nested link</StackedNavLink>
+				<StackedNavLink destination="#" hint="hint text">
+					Deep nested link
+				</StackedNavLink>
 			}
 		>
 			Nested link two

@@ -18,11 +18,6 @@
     color: $nds-colour-link-hover;
   }
 
-  &:focus {
-    @include nds-default-focus-style;
-    color: $nds-colour-link-focus-text;
-  }
-
   &:active {
     color: $nds-colour-link-active;
   }
@@ -50,11 +45,6 @@
 
   &:hover {
     color: $nds-colour-link-inverse-hover;
-  }
-
-  &:focus {
-    @include nds-inverse-focus-style;
-    color: $nds-colour-link-inverse-focus-text;
   }
 
   &:active {

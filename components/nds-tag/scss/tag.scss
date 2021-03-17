@@ -110,10 +110,6 @@ $nds-tag-border-radius: em($nds-spacing-xx-small);
     padding: 0;
     text-decoration: none;
 
-    &:focus {
-      @include nds-default-focus-style;
-    }
-
     &:visited {
       color: $nds-colour-nice-teal;
     }

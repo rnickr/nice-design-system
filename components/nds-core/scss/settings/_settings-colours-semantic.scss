@@ -86,13 +86,25 @@ $nds-colour-link-inverse-focus-text: $nds-colour-link-inverse;
 
 // FOCUS
 
-/// Focus colour
-/// @since 0.2.0
+/// Focus colour background
+/// @since 1.1.0
+$nds-colour-focus-background: #ffdd00;
+
+/// Focus colour (legacy)
+/// @since 0.3.1
 $nds-colour-focus: #0092a6;
 
 /// Focus colour
+/// @since 1.1.0
+$nds-colour-focus-border: $nds-colour-nice-black;
+
+/// Focus colour
 /// @since 0.3.1
-$nds-colour-focus-inverse: $nds-colour-link-inverse;
+$nds-colour-focus-inverse: $nds-colour-focus-background;
+
+/// Focus visible colour
+/// @since 1.1.0
+$nds-colour-focus-visible: $nds-colour-focus-background;
 
 // CTA BUTTONS
 

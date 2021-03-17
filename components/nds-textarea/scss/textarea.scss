@@ -27,10 +27,6 @@
     height: 8em; // default textarea 8 characters tall
     padding: rem($nds-spacing-small);
     width: 100%;
-
-    &:focus {
-      @include nds-default-focus-style;
-    }
   }
 
   &--error {

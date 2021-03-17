@@ -2,8 +2,8 @@ declare module "@nice-digital/nds-checkbox" {
 	import React = require("react");
 
 	export interface CheckboxProps {
-		/** The name attribute for the checkbox */
-		name: string;
+		/** The name attribute for the checkbox. It is optional on the item if passed through from <FormGroup> */
+		name?: string;
 		/** The label for the checkbox. If none supplied will use the value */
 		label?: React.ReactNode;
 		/** The value for the checkbox */

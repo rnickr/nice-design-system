@@ -37,10 +37,6 @@
   &:hover {
     background: $nds-colour-nice-grey-1;
   }
-
-  &:focus {
-    @include nds-default-focus-style;
-  }
 }
 
 /// Filter group consist of a title with one of:
@@ -138,7 +134,6 @@
       width: rem($nds-spacing-medium);
 
       &:focus {
-        @include nds-default-focus-style;
         z-index: 1;
       }
     }
